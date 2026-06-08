@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link href="/assets/css/bootstrap.css" rel="stylesheet">
+  <style type="text/css">
+    body {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+
+    .hero-unit {
+      background-color: #5c1a7e;
+
+      background-image: -webkit-gradient(linear, left top, right top,
+          color-stop(0, #290e38),
+          color-stop(0.35, #5c1a7e),
+          color-stop(0.65, #8b22a2),
+          color-stop(1, #3e0e56));
+
+      background-image: -webkit-linear-gradient(left,
+          #290e38 0%,
+          #5c1a7e 35%,
+          #8b22a2 65%,
+          #3e0e56 100%);
+
+      background-image: linear-gradient(to right,
+          #290e38 0%,
+          #5c1a7e 35%,
+          #8b22a2 65%,
+          #3e0e56 100%);
+
+      filter: drop-shadow(0px 0px 8px #5c1a7e);
+    }
+
+    .hero-split {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      text-align: left;
+      max-width: 28em;
+    }
+
+    .hero-split h1 {
+      margin-bottom: 12px;
+      overflow: hidden;
+      font-family: Slate, sans-serif;
+      font-size: 32px;
+      line-height: 60px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: .5625em;
+    }
+
+    .hero-split h1>span {
+      display: inline-block;
+      float: left;
+      background: #000;
+      color: #FFF;
+      margin: 0 5px 5px 0;
+      padding: 0 2px 0 20px;
+      box-shadow: 0px 0px 4px 4px #2e2e2e33;
+    }
+
+    .hero-lead {
+      filter: drop-shadow(2px 4px 6px black);
+    }
+
+    .alert {
+      -webkit-animation: alertPopup 500ms cubic-bezier(0.68, -0.6, 0.32, 1.6) forwards;
+      animation: alertPopup 500ms cubic-bezier(0.68, -0.6, 0.32, 1.6) forwards;
+    }
+
+    .alert>* {
+      opacity: 0;
+
+      -webkit-transform: translateY(-6px);
+      transform: translateY(-6px);
+
+      -webkit-animation: alertContent 130ms ease-out forwards;
+      animation: alertContent 130ms ease-out forwards;
+
+      -webkit-animation-delay: 300ms;
+      animation-delay: 300ms;
+    }
+
+    @-webkit-keyframes alertPopup {
+      from {
+        -webkit-transform: scaleY(0);
+      }
+
+      to {
+        -webkit-transform: scaleY(1);
+      }
+    }
+
+    @keyframes alertPopup {
+      from {
+        transform: scaleY(0);
+      }
+
+      to {
+        transform: scaleY(1);
+      }
+    }
+
+    @-webkit-keyframes alertContent {
+      to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+      }
+    }
+
+    @keyframes alertContent {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+    @media (max-width: 767px) {
+      .hero-split {
+        max-width: 100%;
+      }
+
+      .hero-split h1 {
+        font-size: 20px;
+        line-height: 36px;
+        letter-spacing: 0.3em;
+      }
+
+      .hero-split h1>span {
+        display: inline-block;
+        float: none;
+        margin: 0 3px 3px 0;
+        padding: 0 6px;
+      }
+
+      .hero-unit p {
+        max-width: 100%;
+      }
+    }
+
+    .disabled {
+      cursor: not-allowed !important;
+    }
+
+    .clickable {
+      cursor: pointer;
+    }
+
+    .content-embed {
+      width: 100%;
+      height: 650px;
+    }
+
+    .media.well {
+      min-height: 100px;
+      background-color: #2b2b2b;
+      background-image: -moz-linear-gradient(top, #333, #222);
+      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333), to(#222));
+      background-image: -webkit-linear-gradient(top, #333, #222);
+      background-image: -o-linear-gradient(top, #333, #222);
+      background-image: linear-gradient(to bottom, #333, #222);
+      border-color: #353535;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff333333', endColorstr='#ff222222', GradientType=0);
+      transition:
+        transform 0.2s ease-in-out,
+        box-shadow 0.2s ease-in-out;
+    }
+
+    .media.well:hover,
+    .media.well:focus-visible {
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .media.well:hover,
+      .media.well:focus-visible {
+        transform: scale(1.025);
+      }
+    }
+
+    .media-object {
+      filter: drop-shadow(0px 2px 4px #24bd61);
+    }
+
+    .download-content{
+      margin: 4px 35px;
+    }
+  </style>
+  <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+      <script src="/assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+<!-- Code injected by Five-server -->
+  <script async data-id="five-server" data-file="/Users/jayden/Portfolio/education/l2ict/unit20.php" type="application/javascript" src="/fiveserver.js"></script>
+  </head>
+
+<body>
+
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="brand" href="/">Portfolio</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li ><a href="/">Home</a></li>
+            <li class="active"><a href="/education/">Education</a></li>
+            <li ><a href="/projects/">Projects</a></li>
+            <li ><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+<style>
+    .education-section h2 {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 18px;
+        margin-top: 5px;
+        font-weight: bold;
+    }
+
+    .education-section h3 {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+
+    .download-box {
+        background-color: #333;
+        background-image: -moz-linear-gradient(top, #444, #333);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#444), to(#333));
+        background-image: -webkit-linear-gradient(top, #444, #333);
+        background-image: -o-linear-gradient(top, #444, #333);
+        background-image: linear-gradient(to bottom, #444, #333);
+        background-repeat: repeat-x;
+        border-style: solid;
+        border-color: #888;
+        border-radius: 4px;
+        padding: 10px 15px 0px 15px;
+        margin: 10px 0;
+    }
+
+    .download-box a {
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .download-box a:hover {
+        text-decoration: underline;
+    }
+
+    .hero-image {
+        filter: drop-shadow(0px 2px 4px #24bd61)
+    }
+</style>
+
+<div class="hero-unit">
+    <div class="row-fluid">
+        <div class="span9">
+            <div class="hero-split">
+                <h1>
+                    <span>UNIT</span>
+                    <span>TWENTY</span>
+
+                    <span>BUILD</span>
+                    <span>A</span>
+                    <span>PC</span>
+                </h1>
+            </div>
+        </div>
+        <!-- should do this better posititioning better.. -->
+        <div class="span3 pull-right" style="">
+            <img src="/assets/images/unit20/icons/buildapc.png" class="img-rounded hero-image">
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row-fluid">
+        <div class="span8">
+            <div class="well">
+                <div class="education-section">
+                    <h2>Introduction</h2>
+                    <p>
+                        This unit covers the different uses of computers, and detailing the types and costs of components they could/should contain, its purpose is to teach how to create plans for and build a PC, and to follow health and safety throughout, it also details on what components should be used in different scenarios, such as a system that needs high performance components for games, or something that needs to be cheap and efficient would use low end components.
+                    </p>
+                </div>
+
+                <div class="education-section">
+                    <h3>Skills Development</h3>
+                    <p>
+                        This unit has been helpful in developing my knowledge on health and safety during the build process, and how to choose the right components under heavy constraints, and it has also been helpful in improving my writing to explain in more detail and in justification of my reasons.
+                    </p>
+                </div>
+
+                <div class="education-section">
+                    <h3>Showcase</h3>
+                    <p>
+                        These are some snippets of my best work from this unit.
+                    </p>
+                    <div class="clickable media well" href="#" data-toggle="modal" data-target="#usecostspecofpc">
+                        <div class="pull-left span2">
+                            <img class="media-object" src="/assets/images/pdficon.png">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Uses, Costs and Specifications of Personal Computers</h4>
+                            <div class="media">
+                                This is a piece of my coursework from Unit 20, where I explain the uses and benefits of different types of PCs, review processors, and write in detail how hardware components have effect on each other. 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clickable media well" href="#" data-toggle="modal" data-target="#produceaplan">
+                        <div class="pull-left span2">
+                            <img class="media-object" src="/assets/images/pdficon.png">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Produce a plan to build a Personal Computer</h4>
+                            <div class="media">
+                                Here is one of assignments from Unit 20, which I wrote a detailed plan of all the stages that go into building a Personal Computer, choosing hardware components that are all compatible with each other, testing, identifying the needed tools, etc.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="span4">
+            <div class="well">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="unit1">Unit 1 - The Online World</a></li>
+                    <li><a href="unit2">Unit 2 - Technology Systems</a></li>
+                    <li><a href="unit3">Unit 3 - Digital Portfolio</a></li>
+                    <li><a href="unit10">Unit 10 - Database Development</a></li>
+                    <li><a href="unit12">Unit 12 - Software Development</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="usecostspecofpc" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="usecostspecofpcLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <a class="pull-right download-content" href="/assets/files/unit20/pcassignment-example.pdf" download>Download</a>
+        <h3 id="modelLabel">Uses, Costs and Specifications of Personal Computers</h3>
+    </div>
+    <div class="modal-body">
+        <object type="application/pdf" data="/assets/files/unit20/pcassignment-example.pdf" class="content-embed">Sorry, your browser does not seem to support this feature. <a href="/assets/files/unit20/pcassignment-example.pdf">Try downloading the PDF instead.</a></object>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>
+</div>
+
+<div id="produceaplan" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="produceaplanLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <a class="pull-right download-content" href="/assets/files/unit20/pcassignment2.pdf" download>Download</a>
+        <h3 id="modelLabel">Produce a plan to build a Personal Computer</h3>
+    </div>
+    <div class="modal-body">
+        <object type="application/pdf" data="/assets/files/unit20/pcassignment2.pdf" class="content-embed">Sorry, your browser does not seem to support this feature. <a href="/assets/files/unit20/pcassignment2.pdf">Try downloading the PDF instead.</a></object>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>
+</div>
+
+    <hr>
+
+    <footer>
+      <p>&copy; Portfolio 2026</p>
+      <p>
+        All trademarks and registered trademarks are the property of their respective owners.
+      </p>
+    </footer>
+
+    </div>
+
+    <script src="/assets/js/jquery.js"></script>
+
+    <script>
+      (function($){
+        $(function(){
+          var baseSpeed = 20;
+          var variance = 50;
+          var spanDelayBase = 120;
+          var $hero = $('.hero-unit');
+          var $herosplit = $('.hero-split h1');
+        
+          // stops the hero size jumping around, we should do it for stuff inside too but eh
+          $hero.css('height', $hero.height());
+          $herosplit.css('height', $herosplit.height());
+
+          $('.hero-split h1>span').each(function(index){
+            var $el = $(this);
+            var text = $el.text();
+            $el.text('');
+
+            var totalDelay = index * spanDelayBase + Math.floor(Math.random() * 90);
+
+            for (var i = 0; i < text.length; i++){
+              (function(i){
+                var charDelay = baseSpeed + Math.floor(Math.random() * variance);
+                totalDelay += charDelay;
+                setTimeout(function(){
+                  $el.text(text.substr(0, i+1));
+                }, totalDelay);
+              })(i);
+            }
+          });
+        });
+      })(jQuery);
+    </script>
+
+    <script src="/assets/js/bootstrap-transition.js"></script>
+    <script src="/assets/js/bootstrap-alert.js"></script>
+    <script src="/assets/js/bootstrap-dropdown.js"></script>
+    <script src="/assets/js/bootstrap-tooltip.js"></script>
+    <script src="/assets/js/bootstrap-popover.js"></script>
+    <script src="/assets/js/bootstrap-button.js"></script>
+    <script src="/assets/js/bootstrap-collapse.js"></script>
+    <script src="/assets/js/bootstrap-carousel.js"></script>
+    <script src="/assets/js/bootstrap-typeahead.js"></script>
+    <script src="/assets/js/bootstrap-modal.js"></script>
+
+    <!--
+    TODO: determine if we need these, or find a way to load them only when necessary
+    <script src="/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="/assets/js/bootstrap-tab.js"></script>
+  -->
+
+  </body>
+</html>

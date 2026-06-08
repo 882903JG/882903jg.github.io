@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link href="/assets/css/bootstrap.css" rel="stylesheet">
+  <style type="text/css">
+    body {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+
+    .hero-unit {
+      background-color: #5c1a7e;
+
+      background-image: -webkit-gradient(linear, left top, right top,
+          color-stop(0, #290e38),
+          color-stop(0.35, #5c1a7e),
+          color-stop(0.65, #8b22a2),
+          color-stop(1, #3e0e56));
+
+      background-image: -webkit-linear-gradient(left,
+          #290e38 0%,
+          #5c1a7e 35%,
+          #8b22a2 65%,
+          #3e0e56 100%);
+
+      background-image: linear-gradient(to right,
+          #290e38 0%,
+          #5c1a7e 35%,
+          #8b22a2 65%,
+          #3e0e56 100%);
+
+      filter: drop-shadow(0px 0px 8px #5c1a7e);
+    }
+
+    .hero-split {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      text-align: left;
+      max-width: 28em;
+    }
+
+    .hero-split h1 {
+      margin-bottom: 12px;
+      overflow: hidden;
+      font-family: Slate, sans-serif;
+      font-size: 32px;
+      line-height: 60px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: .5625em;
+    }
+
+    .hero-split h1>span {
+      display: inline-block;
+      float: left;
+      background: #000;
+      color: #FFF;
+      margin: 0 5px 5px 0;
+      padding: 0 2px 0 20px;
+      box-shadow: 0px 0px 4px 4px #2e2e2e33;
+    }
+
+    .hero-lead {
+      filter: drop-shadow(2px 4px 6px black);
+    }
+
+    .alert {
+      -webkit-animation: alertPopup 500ms cubic-bezier(0.68, -0.6, 0.32, 1.6) forwards;
+      animation: alertPopup 500ms cubic-bezier(0.68, -0.6, 0.32, 1.6) forwards;
+    }
+
+    .alert>* {
+      opacity: 0;
+
+      -webkit-transform: translateY(-6px);
+      transform: translateY(-6px);
+
+      -webkit-animation: alertContent 130ms ease-out forwards;
+      animation: alertContent 130ms ease-out forwards;
+
+      -webkit-animation-delay: 300ms;
+      animation-delay: 300ms;
+    }
+
+    @-webkit-keyframes alertPopup {
+      from {
+        -webkit-transform: scaleY(0);
+      }
+
+      to {
+        -webkit-transform: scaleY(1);
+      }
+    }
+
+    @keyframes alertPopup {
+      from {
+        transform: scaleY(0);
+      }
+
+      to {
+        transform: scaleY(1);
+      }
+    }
+
+    @-webkit-keyframes alertContent {
+      to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+      }
+    }
+
+    @keyframes alertContent {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+    @media (max-width: 767px) {
+      .hero-split {
+        max-width: 100%;
+      }
+
+      .hero-split h1 {
+        font-size: 20px;
+        line-height: 36px;
+        letter-spacing: 0.3em;
+      }
+
+      .hero-split h1>span {
+        display: inline-block;
+        float: none;
+        margin: 0 3px 3px 0;
+        padding: 0 6px;
+      }
+
+      .hero-unit p {
+        max-width: 100%;
+      }
+    }
+
+    .disabled {
+      cursor: not-allowed !important;
+    }
+
+    .clickable {
+      cursor: pointer;
+    }
+
+    .content-embed {
+      width: 100%;
+      height: 650px;
+    }
+
+    .media.well {
+      min-height: 100px;
+      background-color: #2b2b2b;
+      background-image: -moz-linear-gradient(top, #333, #222);
+      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333), to(#222));
+      background-image: -webkit-linear-gradient(top, #333, #222);
+      background-image: -o-linear-gradient(top, #333, #222);
+      background-image: linear-gradient(to bottom, #333, #222);
+      border-color: #353535;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff333333', endColorstr='#ff222222', GradientType=0);
+      transition:
+        transform 0.2s ease-in-out,
+        box-shadow 0.2s ease-in-out;
+    }
+
+    .media.well:hover,
+    .media.well:focus-visible {
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .media.well:hover,
+      .media.well:focus-visible {
+        transform: scale(1.025);
+      }
+    }
+
+    .media-object {
+      filter: drop-shadow(0px 2px 4px #24bd61);
+    }
+
+    .download-content{
+      margin: 4px 35px;
+    }
+  </style>
+  <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+      <script src="/assets/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+<body>
+
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="brand" href="/">Portfolio</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li ><a href="/">Home</a></li>
+            <li class="active"><a href="/education/">Education</a></li>
+            <li ><a href="/projects/">Projects</a></li>
+            <li ><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+<style>
+    .education-section h2 {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 18px;
+        margin-top: 5px;
+        font-weight: bold;
+    }
+
+    .education-section h3 {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+
+    .download-box {
+        background-color: #333;
+        background-image: -moz-linear-gradient(top, #444, #333);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#444), to(#333));
+        background-image: -webkit-linear-gradient(top, #444, #333);
+        background-image: -o-linear-gradient(top, #444, #333);
+        background-image: linear-gradient(to bottom, #444, #333);
+        background-repeat: repeat-x;
+        border-style: solid;
+        border-color: #888;
+        border-radius: 4px;
+        padding: 10px 15px 0px 15px;
+        margin: 10px 0;
+    }
+
+    .download-box a {
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .download-box a:hover {
+        text-decoration: underline;
+    }
+
+    .hero-image {
+        filter: drop-shadow(0px 2px 4px #24bd61)
+    }
+</style>
+
+<div class="hero-unit">
+    <div class="row-fluid">
+        <div class="span9">
+            <div class="hero-split">
+                <h1>
+                    <span>UNIT</span>
+                    <span>THREE</span>
+
+                    <span>DIGITAL</span>
+                    <span>PORTFOLIO</span>
+                </h1>
+            </div>
+        </div>
+        <!-- should do this better posititioning better.. -->
+        <div class="span3 pull-right" style="margin-top: 8px">
+            <img src="/assets/images/unit3/icons/dportfolio.png" class="img-rounded hero-image">
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row-fluid">
+        <div class="span8">
+            <div class="well">
+                <div class="education-section">
+                    <h2>Introduction</h2>
+                    <p>
+                        This unit covers creating an effective portfolio to showcase achievements and high-quality projects/work for potential employers or in applications for courses. It details the design principles that should be followed, giving a clear purpose, showing who you are and your capabilities, while keeping the content engaging.
+                    </p>
+                </div>
+
+                <div class="alert alert-block fade in">
+                    <button type="button" class="close" data-dismiss="alert" style="color: grey;">&times;</button>
+                    <h4>
+                        <strong>Notice:</strong>
+                    </h4>
+                    <div>This unit is still ongoing, so my work and understanding of this subject are not fully finalised. The content shown here may be subject to change.</div>
+                </div>
+
+                <div class="education-section">
+                    <h3>Skills Development</h3>
+                    <p>
+                        So far, there is not much I can say on my knowledge and skills development for this unit. Although I can say it has been helpful in understanding what should go on my portfolio.
+                    </p>
+                </div>
+
+                <div class="education-section">
+                    <h3>Showcase</h3>
+                    <p>
+                        My portfolio is part of my work for this unit, which you are already on, so all I can say is take a look around!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="span4">
+            <div class="well">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="unit1">Unit 1 - The Online World</a></li>
+                    <li><a href="unit2">Unit 2 - Technology Systems</a></li>
+                    <li><a href="unit10">Unit 10 - Database Development</a></li>
+                    <li><a href="unit12">Unit 12 - Software Development</a></li>
+                    <li><a href="unit20">Unit 20 - Build a PC</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <hr>
+
+    <footer>
+      <p>&copy; Portfolio 2026</p>
+      <p>
+        All trademarks and registered trademarks are the property of their respective owners.
+      </p>
+    </footer>
+
+    </div>
+
+    <script src="/assets/js/jquery.js"></script>
+
+    <script>
+      (function($){
+        $(function(){
+          var baseSpeed = 20;
+          var variance = 50;
+          var spanDelayBase = 120;
+          var $hero = $('.hero-unit');
+          var $herosplit = $('.hero-split h1');
+        
+          // stops the hero size jumping around, we should do it for stuff inside too but eh
+          $hero.css('height', $hero.height());
+          $herosplit.css('height', $herosplit.height());
+
+          $('.hero-split h1>span').each(function(index){
+            var $el = $(this);
+            var text = $el.text();
+            $el.text('');
+
+            var totalDelay = index * spanDelayBase + Math.floor(Math.random() * 90);
+
+            for (var i = 0; i < text.length; i++){
+              (function(i){
+                var charDelay = baseSpeed + Math.floor(Math.random() * variance);
+                totalDelay += charDelay;
+                setTimeout(function(){
+                  $el.text(text.substr(0, i+1));
+                }, totalDelay);
+              })(i);
+            }
+          });
+        });
+      })(jQuery);
+    </script>
+
+    <script src="/assets/js/bootstrap-transition.js"></script>
+    <script src="/assets/js/bootstrap-alert.js"></script>
+    <script src="/assets/js/bootstrap-dropdown.js"></script>
+    <script src="/assets/js/bootstrap-tooltip.js"></script>
+    <script src="/assets/js/bootstrap-popover.js"></script>
+    <script src="/assets/js/bootstrap-button.js"></script>
+    <script src="/assets/js/bootstrap-collapse.js"></script>
+    <script src="/assets/js/bootstrap-carousel.js"></script>
+    <script src="/assets/js/bootstrap-typeahead.js"></script>
+    <script src="/assets/js/bootstrap-modal.js"></script>
+
+    <!--
+    TODO: determine if we need these, or find a way to load them only when necessary
+    <script src="/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="/assets/js/bootstrap-tab.js"></script>
+  -->
+
+  </body>
+</html>
