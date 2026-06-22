@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Portfolio</title>
+  <title>Portfolio - Projects</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -182,6 +182,7 @@
     }
 
     @media (prefers-reduced-motion: no-preference) {
+
       .media.well:hover,
       .media.well:focus-visible {
         transform: scale(1.025);
@@ -192,7 +193,7 @@
       filter: drop-shadow(0px 2px 4px #24bd61);
     }
 
-    .download-content{
+    .download-content {
       margin: 4px 35px;
     }
   </style>
@@ -203,8 +204,6 @@
       <script src="/assets/js/html5shiv.js"></script>
     <![endif]-->
 
-<!-- Code injected by Five-server -->
-  <script async data-id="five-server" data-file="/Users/jayden/Portfolio/projects/index.php" type="application/javascript" src="/fiveserver.js"></script>
   </head>
 
 <body>
@@ -247,12 +246,11 @@
         padding: 20px;
         margin-bottom: 20px;
         box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
-        min-height: 250px;
     }
 
     .project-category img {
-        max-width: 220px;
-        max-height: 160px;
+        max-width: 200px;
+        max-height: 140px;
         margin-bottom: 10px;
         display: block;
         margin-left: auto;
@@ -299,7 +297,7 @@
     <div class="span4">
         <div class="project-category">
             <a href="/project/limbo/">
-                <img src="/assets/images/projects/limbo/icons/logo.svg" alt="Limbo" style="filter: drop-shadow(0px 2px 4px #e66306)" />
+                <img src="/assets/images/projects/limbo/icons/logo.svg" alt="Limbo Icon" style="filter: drop-shadow(0px 2px 4px #e66306)" />
             </a>
             <h3>Limbo</h3>
             <p>A private server for old ROBLOX clients, which makes it possible to play versions from 2014, 2016, 2018, and 2020. Made possible through reverse engineering and recreations of hundreds of API endpoints.</p>
@@ -308,15 +306,26 @@
         </div>
     </div>
 
-    <div class="span4 pull-right">
+    <div class="span4">
         <div class="project-category">
             <a href="/project/reverseengineeringblackberry/">
-                <img src="/assets/images/projects/reverseengineeringblackberry/blackberry.png" alt="Reverse Engineering BlackBerry" style="max-height: 220px; max-width: 300px; filter: drop-shadow(0px 2px 4px #067de6)" />
+                <img src="/assets/images/projects/reverseengineeringblackberry/blackberry.png" alt="BlackBerry Icon" style="max-width: 262px; filter: drop-shadow(0px 2px 4px #067de6)" />
             </a>
             <h3>Reverse Engineering BlackBerry</h3>
-            <p>A project of mine, which only further enhanced my reverse engineering skills through learning the depths of BlackBerry OS (including 10) and their consumer apps.</p>
+            <p>A project which further enhanced my reverse engineering skills by navigating through the complex internals of BlackBerry OS (including 10) and their consumer apps.</p>
             <br>
-            <a href="#" class="btn btn-block btn-primary disabled">Coming Soon</a>
+            <a href="#" class="btn btn-block btn-primary disabled">Coming soon</a>
+        </div>
+    </div>
+    <div class="span4">
+        <div class="project-category">
+            <a>
+                <img data-src="holder.js/200x66" alt="Coming soon" style="max-width: 262px; filter: drop-shadow(0px 2px 4px rgb(164, 165, 165)) blur(5px)" />
+            </a>
+            <h3>Coming Soon</h3>
+            <p class="disabled" style="filter: blur(5px)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo felis eget ex facilisis mattis. Donec venenatis ipsum a ex volutpat convallis. Duis diam purus, pulvinar vitae mi at, elementum faucibus risus.</p>
+            <br>
+            <a href="#" class="btn btn-block btn-primary disabled">Coming soon</a>
         </div>
     </div>
 </div>
@@ -378,6 +387,7 @@
     <script src="/assets/js/bootstrap-carousel.js"></script>
     <script src="/assets/js/bootstrap-typeahead.js"></script>
     <script src="/assets/js/bootstrap-modal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/holderjs@2.9.9/holder.min.js"></script>
 
     <!--
     TODO: determine if we need these, or find a way to load them only when necessary
