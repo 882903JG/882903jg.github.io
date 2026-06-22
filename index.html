@@ -182,6 +182,7 @@
     }
 
     @media (prefers-reduced-motion: no-preference) {
+
       .media.well:hover,
       .media.well:focus-visible {
         transform: scale(1.025);
@@ -192,7 +193,7 @@
       filter: drop-shadow(0px 2px 4px #24bd61);
     }
 
-    .download-content{
+    .download-content {
       margin: 4px 35px;
     }
   </style>
@@ -312,6 +313,12 @@
 <h3 style="filter:drop-shadow(2px 2px 6px grey)">NEW CONTENT</h3>
 <!-- row of items -->
 <div class="row-fluid">
+    <a href="/projects/limbo/" class="span3 well well-small project-link content-item">
+        <h5 class="valign">
+            LIMBO - PERSONAL PROJECT
+        </h5>
+        <img class="pull-right content-icon" src="/assets/images/projects/limbo/icons/logo-small.png" alt="Limbo" style="filter: drop-shadow(0px 2px 4px #e66306)" />
+    </a>
     <a href="/education/l2ict/unit1" class="span3 well well-small education-link content-item">
         <h5 class="valign">
             UNIT 1 - THE ONLINE WORLD
@@ -329,12 +336,6 @@
             UNIT 3 - DIGITAL PORTFOLIO
         </h5>
         <img class="pull-right content-icon" src="/assets/images/unit3/icons/dportfolio.png" alt="Digital Portfolio" />
-    </a>
-    <a href="/education/l2ict/unit20" class="span3 well well-small education-link content-item">
-        <h5 class="valign">
-            UNIT 20 - BUILD A PC
-        </h5>
-        <img class="pull-right content-icon" src="/assets/images/unit20/icons/buildapc.png" alt="Build a PC" />
     </a>
 </div>
     <hr>
@@ -394,6 +395,7 @@
     <script src="/assets/js/bootstrap-carousel.js"></script>
     <script src="/assets/js/bootstrap-typeahead.js"></script>
     <script src="/assets/js/bootstrap-modal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/holderjs@2.9.9/holder.min.js"></script>
 
     <!--
     TODO: determine if we need these, or find a way to load them only when necessary
